@@ -1,16 +1,10 @@
 <template>
   <section class="container">
     <h1>{{title}}</h1>
-    <p>{{$store.state.message}}</p>
+    <p>{{message}}</p>
     <hr>
     <pre>[{{now}}]</pre>
-    <div class="link"
-    @click="$store.commit('doit')">
-        <a @click.stop="$store.commit('reset')">
-          clicked: {{ $store.state.counter }}
-        </a>
-    </div>
-    <router-link to="/other">Go to Other</router-link>
+    <router-link to="/">Go to Top</router-link>
   </section>
 </template>
 
@@ -18,14 +12,9 @@
 export default {
   data: function () {
     return {
-      title:'Index',
-      message:'this is root page.',
+      title:'Other',
+      message:'this is other page.',
       now: 'wait'
-    }
-  },
-  methods: {
-    doAction: function(){
-      this.$store.state.counter++;
     }
   },
   created: function () {

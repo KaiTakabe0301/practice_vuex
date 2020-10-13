@@ -1,0 +1,13 @@
+{
+    "allowJs": true,
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [ "./*" ]
+		}
+	},
+	"include": [
+		"./**/*.js",
+		"./**/*.vue"
+	]
+}
